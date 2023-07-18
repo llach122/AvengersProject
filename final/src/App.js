@@ -1,5 +1,7 @@
 import './Style-Sheets/App.css';
 import Header from "./Components/Header.js"
+import Hero from "./Components/Hero.js"
+
 function App() {
   return (
     <div className="App">
@@ -8,6 +10,7 @@ function App() {
       organizations="Organizations"
       knowAbout="Know About"
       enemies="Enemies"/>
+      <Hero/>
       
     </div>
   );
