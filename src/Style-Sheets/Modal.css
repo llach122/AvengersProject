@@ -1,0 +1,101 @@
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+  }
+  #modal{
+    width: 800px;
+    height: 500px;
+  }
+
+  .overlay{
+    height: 30%;
+    width: 100%;
+    margin-bottom: 150px;
+  }
+
+  .modal.hidden {
+    display: none;
+  }
+  
+  .modal-content {
+    width: 100;
+    height: 530px;
+    padding: 20px;
+    border-radius: 5px;
+    border: 2px solid white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    position: relative;
+  }
+
+  .close-modal {
+    background-color: rgba(218, 3, 3, 0.658);
+    padding: 0px 7px;
+    height: 25px;
+    width: auto;
+    border: 2px solid white;
+    border-radius: 15px;
+    align-items: center;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .to-comics{
+    background-color: rgba(0, 255, 42, 0.719);
+    padding: 0px 7px;
+    height: 25px;
+    width: auto;
+    border: 2px solid white;
+    border-radius: 15px;
+    align-items: center;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .to-comics:hover{
+    background-color: gold;
+    transition: 0.4s ease;
+    color: black
+  }
+
+  .close-modal:hover{
+    background-color: gold;
+    transition: 0.4s ease;
+    color:black;
+  }
+
+  .modal-content h2{
+    text-align: center;
+    margin-bottom: 10px;
+
+  }
+  .modal-img{
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+  }
+  .content-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+   
+  }
+  .description{
+    text-align: justify;
+    font-size: 25px;
+  }
+  .buttons-container{
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  
