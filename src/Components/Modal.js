@@ -1,39 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
 import "../Style-Sheets/Modal.css";
 
+const Modal = ({ character, onClose }) => {
+  const [modal, setModal] = useState(true);
 
-function Modal({ selectedCharacter, closeModal, setCharacterId }) {
- 
+  const toggleModal = () => {
+    setModal(!modal);
+    onClose();
+  };
 
   return (
-    <div className={`modal ${selectedCharacter ? "" : "hidden"}`}>
-      {selectedCharacter && (
-        <div id="modal">
-          <div className="overlay">
-          <div className="modal-content">
-               <h2>{selectedCharacter.name}</h2>
-               <div className="content-container">
-              <img src={`${selectedCharacter.thumbnail.path}.${selectedCharacter.thumbnail.extension}`} className ="modal-img"></img>
-              <p className="description">{selectedCharacter.description}</p>
-              </div>
-              
-              <div className="buttons-container">
-                <button className="close-modal" onClick={closeModal}>
-                  Cerrar
-                </button>
-                
-                
-                  <button className="to-comics">
-                    View Comics
-                  </button>
-                
-              </div>
-            </div>
+    <div className={`mmodal-container ${modal ? "open" : ""}`}>
+      {character && ( 
+        <div className="mmodal-overlay">
+
+          <div> 
+          <div className="h2-container"><h2 className="mh2">{ character.name }</h2>
+          </div>
+
+            <div className="mcontent">
+            <img src={`${character?.thumbnail?.path}.${character?.thumbnail?.extension}`} alt={character.name}/>
+            <p>{character.description}</p></div>
+            
+          </div>
+          <div className="mbtn-container">
+            <button className="mshut" onClick={toggleModal}>
+              Close
+            </button>
+            <button className="mcomics">View Comics</button>
           </div>
         </div>
       )}
     </div>
   );
-}
+};
 
 export default Modal;

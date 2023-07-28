@@ -1,10 +1,12 @@
 import React from "react";
-import "../Style-Sheets/Header.css"
 
-export function Header (props){
-    return(
-        <header className="header">
-            {props.childen}
-        </header>
-    )
-}
+const Header = ({ onShowFavorites }) => {
+  return (
+    <header>
+      <h1>Marvel Characters</h1>
+      <button onClick={onShowFavorites}>Show Favorites</button>
+    </header>
+  );
+};
+
+export default Header;
